@@ -1,0 +1,34 @@
+*{ /* Selector universal. Selecciona todos los elementos */
+    background-color: cornflowerblue;
+    /* color:royalblue; */ 
+}
+
+p{ /* Selectores de tipo, etiqueta*/
+    color: #CD5C5C;
+}
+
+span{
+    background-color: rgb(255, 160, 122);
+}
+
+ol,
+ul{
+    color:goldenrod;
+}
+
+h1{
+    color:chocolate;
+    text-align: center;
+}
+
+/* Selectores de id. Seleccionar un elemento específico, NO se comparte con otros elementos */
+#parrafo-principal{
+    font-size:30px;
+    color:chartreuse;
+}
+
+/* Selectores de clase, selecciona elementos con el atributo class. Las clases se pueden compartir */
+.verso-poema{
+    background-color: darkseagreen;
+    font-size: 60px;
+}
