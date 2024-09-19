@@ -13,7 +13,7 @@
 
     <main>
         <section>
-            <form action="" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
+            <form action="https://formsubmit.co/tania.gayosso@idr.edu.mx" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
                 <fieldset> <!-- Permite agrupar por campos -->
                     <legend> Datos básicos de contacto </legend>
                     <!-- La asociación semántica con la etiqueta label, puede hacerse con las etiquetas por separado, como en las líneas 20 y 21 o anidadas, xomo en la línea 24 -->
@@ -33,9 +33,9 @@
                     <legend> Datos del pedido </legend>
                     <span>El número mínimo de tamales para hacer un pedido es de 20 piezas y máximo 300. ¡Gracias por su comprensión! </span>
                     <br>
-                    Número de tamales: <input type="number" min="20" max="300" required>
+                    Número de tamales: <input type="number" min="20" max="300" required name="numero-de-tamales-requeridos">
                     <br>
-                    Fecha de entrega: <input type="date">
+                    Fecha de entrega: <input type="date" name="fecha-de-entrega">
                 </fieldset>
 
                 <fieldset>
@@ -57,12 +57,12 @@
                     <select name="" id="">
                         <option value="sucursal-coyoacan"> Sucursal Coyoacán </option>
                         <option value="sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
-                        <option value="sucursal-xochimilco"></option>
-                        <option value="sucursal-satelite"></option>
-                        <option value="sucursal-ecatepec"></option>
-                        <option value="sucursal-guadalajara"></option>
-                        <option value="sucursal-waverly-place"></option>
-                        <option value="sucursal-mazatlan"></option>
+                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
+                        <option value="sucursal-satelite"> Sucursal Satélite </option>
+                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
+                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
+                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
+                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
                     </select>
                     <br>
                     <!-- Esta forma le da la opción al usuario para escoger a partir de las primeras letras de lo que busca -->
@@ -70,12 +70,12 @@
                     <datalist id="sucursal">
                         <option value="Sucursal Coyoacán"></option>
                         <option value="Sucursal San Martín de las Flores"></option>
-                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
-                        <option value="sucursal-satelite"> Sucursal Satélite </option>
-                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
-                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
-                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
-                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
+                        <option value="sucursal-xochimilco"></option>
+                        <option value="sucursal-satelite"></option>
+                        <option value="sucursal-ecatepec"></option>
+                        <option value="sucursal-guadalajara"></option>
+                        <option value="sucursal-waverly-place"></option>
+                        <option value="sucursal-mazatlan"></option>
                     </datalist>
                     <br>
                     <!-- Casilla de verificación -->
