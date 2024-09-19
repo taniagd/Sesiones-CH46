@@ -16,9 +16,13 @@
             <form action="" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
                 <fieldset> <!-- Permite agrupar por campos -->
                     <legend> Datos básicos de contacto </legend>
-                    Nombres: <input type="text" placeholder="Juanita" name="nombres" required>
+                    <!-- La asociación semántica con la etiqueta label, puede hacerse con las etiquetas por separado, como en las líneas 20 y 21 o anidadas, xomo en la línea 24 -->
+                    <label for="nombre">Nombres:</label>
+                    <input id="nombre" type="text" placeholder="Juanita" name="nombres" required>
                     <br>
-                    Apellidos: <input type="text" placeholder="García" name="apellidos">
+
+                    <label for="">Apellidos: <input type="text" placeholder="García" name="apellidos"></label>
+
                     <br>
                     Correo electrónico: <input type="email" placeholder="juanitagarcia@gmail.com" required name="correo">
                     <br>
@@ -36,16 +40,29 @@
 
                 <fieldset>
                     <legend> Datos del envío </legend>
+                   <!-- El atributo name debe ser igual para todas las opciones del input de tipo radio, para que solo se pueda seleccionar una opción y no todas. --> 
+                    <!-- El valor del atributo for, en label, debe ser igual al valor del atributo id del input correspondiente -->
+                    <label for="recoger-sucursal">
+                        <input id="recoger-sucursal" type="radio" name="tipo-de-envio"> Recoger en sucursal
+                    </label>
+                    <label for="envio-a-domicilio">
+                        <input id="envio-a-domicilio" type="radio" name="tipo-de-envio"> Envío a domicilio
+                    </label>
+                    <label for="delivery">
+                        <input id="delivery" type="radio" name="tipo-de-envio"> Delivery
+                    </label>
+                    <br>
+
                     <!-- Con el select, el usuario debe hacer scroll infinito hasta encontrar la opción deseada -->
                     <select name="" id="">
                         <option value="sucursal-coyoacan"> Sucursal Coyoacán </option>
                         <option value="sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
-                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
-                        <option value="sucursal-satelite"> Sucursal Satélite </option>
-                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
-                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
-                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
-                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
+                        <option value="sucursal-xochimilco"></option>
+                        <option value="sucursal-satelite"></option>
+                        <option value="sucursal-ecatepec"></option>
+                        <option value="sucursal-guadalajara"></option>
+                        <option value="sucursal-waverly-place"></option>
+                        <option value="sucursal-mazatlan"></option>
                     </select>
                     <br>
                     <!-- Esta forma le da la opción al usuario para escoger a partir de las primeras letras de lo que busca -->
@@ -61,7 +78,9 @@
                         <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
                     </datalist>
                     <br>
-
+                    <!-- Casilla de verificación -->
+                     <input type="checkbox" required> Acepto los términos y condiciones
+                     <br>
                     <!-- <input type="submit"> --> 
                     <button type="submit">Ámonos recio</button>
                 </fieldset>
