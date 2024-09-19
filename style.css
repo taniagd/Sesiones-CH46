@@ -1,10 +1,15 @@
 *{ /* Selector universal. Selecciona todos los elementos */
     background-color: cornflowerblue;
-    /* color:royalblue; */ 
-}
+    /* color:royalblue; */
+    font-family: "Handjet", sans-serif;
+} 
 
 p{ /* Selectores de tipo, etiqueta*/
-    color: #CD5C5C;
+    color: olivedrab;
+}
+
+p::first-letter{
+    color:orangered;
 }
 
 span{
@@ -21,14 +26,36 @@ h1{
     text-align: center;
 }
 
+h1:hover{
+    color: #f0821b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* Selectores de id. Seleccionar un elemento específico, NO se comparte con otros elementos */
 #parrafo-principal{
     font-size:30px;
     color:chartreuse;
 }
 
+#parrafo-principal::first-line{
+    color:purple;
+}
+
 /* Selectores de clase, selecciona elementos con el atributo class. Las clases se pueden compartir */
 .verso-poema{
     background-color: darkseagreen;
     font-size: 60px;
+}
+
+img#foto-seccion-principal{ /* Id de imagen */
+    width:200px;
+    height:300px;
+    border-radius:25% 10%;
+    border: 2px dashed #10383c;
+}
+
+div#seccion-principal{ /* Id del div */
+    border: 10px solid rgb(232, 70, 141); /* Ancho, estilo, color */
+    padding: 200px 30px 100px 28px; /* TRouBLe Top, Right, Bottom, Left */
+    margin: 70px;
 }
