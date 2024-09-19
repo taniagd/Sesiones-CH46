@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ¡Contáctanos! </title>
+</head>
+<body>
+    
+    <header>
+        <h1> Haz tus pedidos a través de este formulario </h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
+                <fieldset> <!-- Permite agrupar por campos -->
+                    <legend> Datos básicos de contacto </legend>
+                    Nombres: <input type="text" placeholder="Juanita" name="nombres" required>
+                    <br>
+                    Apellidos: <input type="text" placeholder="García" name="apellidos">
+                    <br>
+                    Correo electrónico: <input type="email" placeholder="juanitagarcia@gmail.com" required name="correo">
+                    <br>
+                    Teléfono: <input type="tel" placeholder="2684397887" name="numero-telefonico">
+                </fieldset>
+
+                <fieldset>
+                    <legend> Datos del pedido </legend>
+                    <span>El número mínimo de tamales para hacer un pedido es de 20 piezas y máximo 300. ¡Gracias por su comprensión! </span>
+                    <br>
+                    Número de tamales: <input type="number" min="20" max="300" required>
+                    <br>
+                    Fecha de entrega: <input type="date">
+                </fieldset>
+
+                <fieldset>
+                    <legend> Datos del envío </legend>
+                    <!-- Con el select, el usuario debe hacer scroll infinito hasta encontrar la opción deseada -->
+                    <select name="" id="">
+                        <option value="sucursal-coyoacan"> Sucursal Coyoacán </option>
+                        <option value="sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
+                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
+                        <option value="sucursal-satelite"> Sucursal Satélite </option>
+                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
+                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
+                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
+                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
+                    </select>
+                    <br>
+                    <!-- Esta forma le da la opción al usuario para escoger a partir de las primeras letras de lo que busca -->
+                    Por favor, escoge una sucursal: <input list="sucursal">
+                    <datalist id="sucursal">
+                        <option value="Sucursal Coyoacán"></option>
+                        <option value="Sucursal San Martín de las Flores"></option>
+                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
+                        <option value="sucursal-satelite"> Sucursal Satélite </option>
+                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
+                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
+                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
+                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
+                    </datalist>
+                    <br>
+
+                    <!-- <input type="submit"> --> 
+                    <button type="submit">Ámonos recio</button>
+                </fieldset>
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>
