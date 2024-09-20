@@ -1,0 +1,104 @@
+*{ /* Resetear estilos que vienen por default en el navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ /* Declaramos variables para reutilizar los colores */
+    --color_texto:#5c3d5b;
+    --color_elementos_fieldset:#4d3e6b;
+    --color_boton:#f07360;
+    --color_hover:#ed7866;
+    --color_borde_fieldset:rgb(180, 234, 180);
+
+    /* Podemos declarar variables para las fuentes y para unidades de medida también */
+    /*--fuentePrincipal: "Lora", serif; */
+   /*--fuenteSecundaria: "Ubuntu", sans-serif; */
+   /*--pane-padding: 5px 42px; */
+}
+
+header{
+    display: flex; /* Visualización en un contenedor sea flexible */
+    justify-content: space-between; /* Distribuye uniformemente lso elementos a lo largo del contenedor */
+    padding:10px;
+}
+
+nav>ul{ /* Ul es hija directa de nav */ 
+    list-style-type: none; /* Se eliminan los marcadores de la lista, que son los bullet points */
+    display: flex;
+}
+
+/* Elementos de la barra de navegación */
+.elementos-navegacion{
+    margin: 20px 50px; /* TRouBLe, en sentido de las manecillas del reloj. Pero cuando hay dos valores, el primero es para top y bottom y el segundo, para right y left*/
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em; /* Las unidades relativas, se sugieren para el tamaño de fuentes */
+    /* font-weight: 500; Peso de la fuente */
+}
+
+/* Enlaces dentro de los elementos de la barra de navegación */
+.elementos-navegacion a{
+    text-decoration: none; /* Elimina el subrayado de la etiqueta a */
+    color: var(--color_texto); /* Cambiando el color usando una variable */
+}
+
+.elementos-navegacion a:hover{ /* Uso de pseudoclase en los enlaces de la navegación */
+    color: var(--color_hover);
+    text-decoration: underline overline;
+}
+
+h1{
+    color: var(--color_texto);
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+form{
+    width:70%; /* Ocupa el 70% del contenedor principal */
+    max-width: 800px; /* Ancho máximo */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+fieldset{
+    border-color: var(--color_borde_fieldset);
+    border-radius: 1.2em;
+    color:var(--color_elementos_fieldset);
+    margin:20px;
+}
+
+legend{
+    text-align: left;
+}
+
+/* Pseudoelemento */
+legend::first-letter{
+    color: var(--color_boton);
+}
+
+#datos-del-pedido,
+#datos-de-envio{
+    padding:30px 50px;
+}
+
+
+#datos-basicos label{
+    display: block;/* Hace que las etiquetas se muestren como elementos de bloque, así no utilizamos br en html */
+}
+
+#datos-basicos input,
+#datos-del-pedido input,
+#datos-de-envio input{
+    border: 2px solid var(--color_elementos_fieldset);
+    width: 200px;
+}
+
+/* Estilos a cmapos de entrada (inputs) cuando estén en foco */
+
+input[type="text"]:focus{
+   /*  box-shadow: 10px 7px var(--color_elementos_fieldset); */
+   background-color: var(--color_elementos_fieldset);
+}
