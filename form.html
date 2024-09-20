@@ -4,41 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ¡Contáctanos! </title>
+    <link rel="stylesheet" href="/form.css">
+    <link rel="shortcut icon" href="/tamales.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header>
-        <h1> Haz tus pedidos a través de este formulario </h1>
+        <nav>
+            <ul>
+                <li class="elementos-navegacion"> 
+                    <a href="index.html"> Inicio </a> 
+                </li>
+                <li class="elementos-navegacion"> 
+                    <a href="https://www.unam.mx/#" target="_blank"> Nosotros </a>
+                </li>
+                <li class="elementos-navegacion"> 
+                    <a href=""> Productos destacados </a>
+                </li>
+                <li class="elementos-navegacion">
+                    <a href=""> Contacto </a>
+                </li>
+            </ul>
+        </nav>
+    
     </header>
 
     <main>
         <section>
+            <h1> Haz tus pedidos a través de este formulario </h1>
             <form action="https://formsubmit.co/tania.gayosso@idr.edu.mx" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
-                <fieldset> <!-- Permite agrupar por campos -->
+                <fieldset id="datos-basicos"> <!-- Permite agrupar por campos -->
                     <legend> Datos básicos de contacto </legend>
                     <!-- La asociación semántica con la etiqueta label, puede hacerse con las etiquetas por separado, como en las líneas 20 y 21 o anidadas, xomo en la línea 24 -->
-                    <label for="nombre">Nombres:</label>
-                    <input id="nombre" type="text" placeholder="Juanita" name="nombres" required>
-                    <br>
+                    <label for="nombre">Nombres:
+                        <input id="nombre" type="text" placeholder="Juanita" name="nombres" required>
+                    </label>
+
 
                     <label for="">Apellidos: <input type="text" placeholder="García" name="apellidos"></label>
 
-                    <br>
-                    Correo electrónico: <input type="email" placeholder="juanitagarcia@gmail.com" required name="correo">
-                    <br>
-                    Teléfono: <input type="tel" placeholder="2684397887" name="numero-telefonico">
+                 
+                    <label for="">Correo electrónico: <input type="email" placeholder="juanitagarcia@gmail.com" required name="correo"></label>
+                    
+                    <label for="">Teléfono: <input type="tel" placeholder="2684397887" name="numero-telefonico"></label>
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="datos-del-pedido">
                     <legend> Datos del pedido </legend>
                     <span>El número mínimo de tamales para hacer un pedido es de 20 piezas y máximo 300. ¡Gracias por su comprensión! </span>
-                    <br>
+                    
                     Número de tamales: <input type="number" min="20" max="300" required name="numero-de-tamales-requeridos">
-                    <br>
+                    
                     Fecha de entrega: <input type="date" name="fecha-de-entrega">
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="datos-de-envio">
                     <legend> Datos del envío </legend>
                    <!-- El atributo name debe ser igual para todas las opciones del input de tipo radio, para que solo se pueda seleccionar una opción y no todas. --> 
                     <!-- El valor del atributo for, en label, debe ser igual al valor del atributo id del input correspondiente -->
