@@ -96,9 +96,24 @@ legend::first-letter{
     width: 200px;
 }
 
-/* Estilos a cmapos de entrada (inputs) cuando estén en foco */
+/* Estilos a campos de entrada (inputs) cuando estén en foco */
 
-input[type="text"]:focus{
+input[type="text"]:focus{ /* Este selector indica que se seleccionarán los inputs con el atributo type="text" y se añade una pseudoclase */
    /*  box-shadow: 10px 7px var(--color_elementos_fieldset); */
    background-color: var(--color_elementos_fieldset);
+}
+
+#datos-de-envio select[name="sucursales"]{
+    width: 200px;
+    border: 2px solid var(--color_elementos_fieldset);
+}
+
+button[type="submit"]{
+    color: var(--color_boton);
+    background-color: #4d3e6b;
+    float: right;
+}
+
+button:active{
+    transform:scale(0.90);
 }
